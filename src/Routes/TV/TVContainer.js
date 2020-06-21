@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class TV extends Component {
+export default class TVContainer extends Component {
     render() {
         return (
             <div>

@@ -6,10 +6,13 @@ import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom"
 import Movie from "../Routes/Movie";
 import TV from "../Routes/TV";
 import Search from "../Routes/Search";
+import Header from "../Components/Header";
 
 
 export default () => (
     <Router>
+        <>
+        <Header/>
         <Switch>    
         {/* view가 들어오는 칸인데 비어있는 뷰  */}
             <Route path="/" exact component={Movie} />
@@ -17,5 +20,6 @@ export default () => (
             <Route path="/search" exact component={Search} />
             <Redirect from="*" to="/" />
         </Switch>
+        </>
     </Router>
 );
